@@ -139,6 +139,7 @@ namespace PPE3_NotaGame
               
                 if (table == "constructeur") Controleur.crud_constructeur('c', -1);
                 if (table == "support") Controleur.crud_support('c', -1);
+                if (table == "users") Controleur.crud_user('c', -1);
             }
             else
             {
@@ -152,6 +153,7 @@ namespace PPE3_NotaGame
                        
                         if (table == "constructeur") Controleur.crud_constructeur('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                         if (table == "support") Controleur.crud_support('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "users") Controleur.crud_user('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
@@ -160,6 +162,7 @@ namespace PPE3_NotaGame
                        
                         if (table == "constructeur") Controleur.crud_constructeur('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                         if (table == "support") Controleur.crud_support('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "users") Controleur.crud_user('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                     }
                    
                 }

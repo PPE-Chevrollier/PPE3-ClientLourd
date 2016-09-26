@@ -198,6 +198,86 @@ namespace PPE3_NotaGame
                 }
             }
         }
+
+        public static void crud_user(Char c, int indice)
+        {
+            if (c == 'd')  // suppression
+            {
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce user " + vmodele.DT[5].Rows[indice][2].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    // on supprime l’élément du DataTable
+                    vmodele.DT[5].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[5].Update(vmodele.DT[5]);			// mise à jour du DataAdapter
+                }
+            }
+            else
+            {
+                FormCRUDUser formCRUD = new FormCRUDUser(c);  // création de la nouvelle forme
+                if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
+                {
+                    // à écrire : mettre les contrôles de formCRUD à vide
+                    formCRUD.Tb_Email.Clear();
+                    formCRUD.Tb_Pseudo.Clear();
+                    formCRUD.Tb_Communaute.Clear();
+                }
+
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    // on remplit les zones par les valeurs du dataGridView correspondantes
+                    formCRUD.Tb_Email.Text = vmodele.DT[5].Rows[indice][1].ToString();
+                    formCRUD.Tb_Pseudo.Text = vmodele.DT[5].Rows[indice][2].ToString();
+                    formCRUD.Tb_Communaute.Text = vmodele.DT[5].Rows[indice][3].ToString();
+                    // mise à jour de la comboBox faite avec le nom du constructeur dans le Load de la formCRUD
+                }
+
+            eti:
+                // on affiche la nouvelle form
+                formCRUD.ShowDialog();
+
+                // si l’utilisateur clique sur OK
+                if (formCRUD.DialogResult == DialogResult.OK)
+                {
+                    if (c == 'c') // ajout
+                    {
+                        // on crée une nouvelle ligne dans le dataView
+                        if (formCRUD.Tb_Email.Text != "" && formCRUD.Tb_Pseudo.Text != "" && formCRUD.Tb_Communaute.Text != "")
+                        {
+                            DataRow NouvLigne = vmodele.DT[5].NewRow();
+                            NouvLigne["EMAIL"] = formCRUD.Tb_Email.Text;
+                            NouvLigne["PSEUDO"] = formCRUD.Tb_Pseudo.Text;
+                            NouvLigne["COMMUNAUTE"] = formCRUD.Tb_Communaute.Text;
+
+                            vmodele.DT[5].Rows.Add(NouvLigne);
+                            vmodele.DA[5].Update(vmodele.DT[5]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Veuillez remplir tous les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // ne pas fermer la form : revenir avant le bouton OK
+                            goto eti;
+                        }
+                    }
+
+                    if (c == 'u')  // modif
+                    {
+                        // on met à jour le dataTable avec les nouvelles valeurs
+                        vmodele.DT[5].Rows[indice]["EMAIL"] = formCRUD.Tb_Email.Text;
+                        vmodele.DT[5].Rows[indice]["PSEUDO"] = formCRUD.Tb_Pseudo.Text;
+                        vmodele.DT[5].Rows[indice]["COMMUNAUTE"] = formCRUD.Tb_Communaute.Text;
+                        vmodele.DA[5].Update(vmodele.DT[5]);
+                    }
+
+                    // MessageBox.Show("OK : données enregistrées Constructeur");
+                    formCRUD.Dispose();  // on ferme la form
+                }
+                else
+                {
+                    MessageBox.Show("Annulation : aucune donnée enregistrée");
+                    formCRUD.Dispose();
+                }
+            }
+        }
         #endregion
 
     }

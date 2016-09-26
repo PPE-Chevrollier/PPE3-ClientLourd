@@ -121,6 +121,29 @@
             propriété TbCaract de type TextBox : caractéristiques du support
             </summary>
         </member>
+        <member name="M:PPE3_NotaGame.FormCRUDUser.#ctor(System.Char)">
+            <summary>
+            constructeur FormCRUDUser 
+            </summary>
+            <param name="action">c : en creation, u : en update</param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDUser.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDUser.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDUser.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:PPE3_NotaGame.FormGestion">
             <summary>
             FormGestion : form permettant la sélection d'une table de la BD et d'afficher les données correspondantes

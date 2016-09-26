@@ -70,3 +70,4 @@ C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\
 C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormPrincipale.resources
 C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Properties.Resources.resources
 C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csproj.GenerateResource.Cache
+C:\Users\quent\Desktop\git\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDUser.resources
