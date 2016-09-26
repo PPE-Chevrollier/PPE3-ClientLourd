@@ -9,6 +9,11 @@
             classe Controleur : classe statique de lien entre Modele et les vues
             </summary>
         </member>
+        <member name="P:PPE3_NotaGame.Controleur.Vmodele">
+            <summary>
+            propriété Vmodele
+            </summary>
+        </member>
         <member name="M:PPE3_NotaGame.Controleur.init">
             <summary>
             instanciation du modele
@@ -27,11 +32,6 @@
             </summary>
             <param name="c">définit l'action : c:create, u update, d delete </param>
             <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
-        </member>
-        <member name="P:PPE3_NotaGame.Controleur.Vmodele">
-            <summary>
-            propriété Vmodele
-            </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormCRUDConstructeur">
             <summary>
@@ -229,6 +229,31 @@
             Classe Modele gérant la connexion et gestion avec la BD "bd_ppe3_notagame"
             </summary>
         </member>
+        <member name="P:PPE3_NotaGame.Modele.Connopen">
+            <summary>
+            test si la connexion à la BD est ouverte
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.Errgrave">
+            <summary>
+            test si erreur lors de la connexion
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.Chargement">
+            <summary>
+            test si le chargement d'une requête est fait
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.DA">
+            <summary>
+            Accesseur de la collection des DataAdapter
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.DT">
+            <summary>
+            Accesseur de la collection des DataTable
+            </summary>
+        </member>
         <member name="M:PPE3_NotaGame.Modele.#ctor">
             <summary>
             Modele() : constructeur permettant l'ajout des DataAdpater et DataTable nécessaires (4 nécessaires pour l'existant actuel)
@@ -262,31 +287,6 @@
             charge dans un DT les données de la table passée en paramètre
             </summary>
             <param name="table">nom de la table à requêter</param>
-        </member>
-        <member name="P:PPE3_NotaGame.Modele.Connopen">
-            <summary>
-            test si la connexion à la BD est ouverte
-            </summary>
-        </member>
-        <member name="P:PPE3_NotaGame.Modele.Errgrave">
-            <summary>
-            test si erreur lors de la connexion
-            </summary>
-        </member>
-        <member name="P:PPE3_NotaGame.Modele.Chargement">
-            <summary>
-            test si le chargement d'une requête est fait
-            </summary>
-        </member>
-        <member name="P:PPE3_NotaGame.Modele.DA">
-            <summary>
-            Accesseur de la collection des DataAdapter
-            </summary>
-        </member>
-        <member name="P:PPE3_NotaGame.Modele.DT">
-            <summary>
-            Accesseur de la collection des DataTable
-            </summary>
         </member>
         <member name="M:PPE3_NotaGame.Program.Main">
             <summary>

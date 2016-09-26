@@ -103,7 +103,7 @@ namespace PPE3_NotaGame
         /// </summary>
         public void seconnecter()
         {
-            string myConnectionString = "Database=bd_ppe3_notagame;Data Source=localhost;User Id=root;";
+            string myConnectionString = "Database=bd_notagame;Data Source=192.168.152.2;User Id=notagame;Password=Azerty123;";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative 
             {
