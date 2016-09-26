@@ -91,7 +91,7 @@ namespace PPE3_NotaGame
         /// </summary>
         public Modele() {
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 7; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -184,9 +184,24 @@ namespace PPE3_NotaGame
             {
                 // on charge à la fois la table complète SUPPORT pour les mises à jour et la table avec les jointures pour avoir les libellés en clair des clés étrangères
                 charger("select idS, nomS, caracteristiques, anneeSortie, nomC from support S inner join constructeur C on S.IDC = C.IDC order by idS;", dT[2], dA[2]);
-                charger("select * from support;", dT[3], dA[3]);
+                //charger("select * from support;", dT[3], dA[3]);
             }
-         
+            if (table == "compatible")
+            {
+                charger("select NOMJV,NOMS from compatible AS C INNER JOIN jeuxvideos AS V ON C.IDJV=V.IDJV INNER JOIN support AS s ON C.IDS=s.IDS;", dT[3], dA[3]);
+                //charger("select * from compatible;", dT[5], dA[5]);
+            }
+            if (table == "jeuxvideos")
+            {
+                charger("select * from jeuxvideos;", dT[4], dA[4]);
+                //charger("select * from compatible", dT[5], dA[5]);
+            }
+            if (table == "users")
+            {
+                charger("select * from users;", dT[5], dA[5]);
+                //charger("select * from compatible", dT[5], dA[5]);
+            }
+
         }
     }
 }

@@ -72,12 +72,41 @@ namespace PPE3_NotaGame
                     {
                         bindingSource1.DataSource = Controleur.Vmodele.DT[2];
                         dGvJeux.DataSource = bindingSource1;
-                        dGvJeux.Columns["IDS"].HeaderText = "Id Support";
+                        dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
                         dGvJeux.Columns["NOMC"].HeaderText = "Nom_Constructeur";
                         dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
                         dGvJeux.Columns["CARACTERISTIQUES"].HeaderText = "Caractéristiques";
                         dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Année_Sortie";
                        
+                    }
+                    else if (table == "compatible")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[3];
+                        dGvJeux.DataSource = bindingSource1;
+                        //dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
+                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_jeuxvideo";
+                        //dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
+                        dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
+                    }
+                    else if (table == "jeuxvideos")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[4];
+                        dGvJeux.DataSource = bindingSource1;
+                        dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
+                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_JeuxVideo";
+                        dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Annee_de_sortie";
+                        dGvJeux.Columns["CLASSIFICATION"].HeaderText = "Classification";
+                        dGvJeux.Columns["EDITEUR"].HeaderText = "Editeur";
+                        dGvJeux.Columns["DESCRIPTION"].HeaderText = "Description";
+                    }
+                    else if (table == "users")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[5];
+                        dGvJeux.DataSource = bindingSource1;
+                        dGvJeux.Columns["IDU"].HeaderText = "Id_users";
+                        dGvJeux.Columns["EMAIL"].HeaderText = "Email";
+                        dGvJeux.Columns["PSEUDO"].HeaderText = "Pseudo";
+                        dGvJeux.Columns["COMMUNAUTE"].HeaderText = "Communaute";
                     }
 
                     // mise à jour du dataGridView via le bindingSource rempli par le DataTable
