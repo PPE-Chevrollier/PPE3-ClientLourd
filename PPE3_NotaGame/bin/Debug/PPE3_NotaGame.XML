@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PPE3_NotaGame</name>
+    </assembly>
+    <members>
+        <member name="T:PPE3_NotaGame.Controleur">
+            <summary>
+            classe Controleur : classe statique de lien entre Modele et les vues
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.init">
+            <summary>
+            instanciation du modele
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_constructeur(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table Constructeur
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete</param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_support(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table Support
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete </param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
+        <member name="P:PPE3_NotaGame.Controleur.Vmodele">
+            <summary>
+            propriété Vmodele
+            </summary>
+        </member>
+        <member name="T:PPE3_NotaGame.FormCRUDConstructeur">
+            <summary>
+            FormCRUDConstructeur : feuille qui permet la gestion Ajout/modification d'un constructeur de jeux vidéos
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDConstructeur.#ctor">
+            <summary>
+            Constructeur FormCRUDConstructeur
+            </summary>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDConstructeur.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDConstructeur.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDConstructeur.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDConstructeur.TbNom">
+            <summary>
+            propriété TbNom de type TextBox : Nom du constructeur
+            </summary>
+        </member>
+        <member name="T:PPE3_NotaGame.FormCRUDSupport">
+            <summary>
+            FormCRUDSupport : form permettant l'ajout/modification d'un support
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDSupport.#ctor(System.Char,System.Int32)">
+            <summary>
+            constructeur FormCRUDSupport 
+            </summary>
+            <param name="action">c : en creation, u : en update</param>
+            <param name="ind">indice du support sélectionné en cas d'update</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDSupport.FormCRUD_Load(System.Object,System.EventArgs)">
+            <summary>
+            Chargement de FormCRUD : remplissage de la comboBox des constructeurs
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDSupport.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDSupport.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDSupport.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDSupport.TbNom">
+            <summary>
+            propriété TbNom de type TextBox : nom du support
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDSupport.NumAnnee">
+            <summary>
+            propriété NumAnnee de type NumericUpDown : année du support
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDSupport.CbConstructeur">
+            <summary>
+            propriété CbConstructeur de type ComboBox : liste des constructeurs
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDSupport.TbCaract">
+            <summary>
+            propriété TbCaract de type TextBox : caractéristiques du support
+            </summary>
+        </member>
+        <member name="T:PPE3_NotaGame.FormGestion">
+            <summary>
+            FormGestion : form permettant la sélection d'une table de la BD et d'afficher les données correspondantes
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.#ctor">
+            <summary>
+            Constructeur FormGestion
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.FormGestion_Load(System.Object,System.EventArgs)">
+            <summary>
+            Chargement FormGestion : chargement des noms des tables de la BD dans la comboBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.cbTable_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            évènement SelectedIndexChanged : à la sélection d'une table, on charge les données de la BD correspondantes dans le dataGridView 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.ContextMenuStrip_Click(System.Object,System.EventArgs)">
+            <summary>
+            Gestion du menu contextuel et appel aux méthodes correspondantes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormGestion.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPE3_NotaGame.FormPrincipale">
+            <summary>
+            FormPrincipale : gestion du menu principale
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.#ctor">
+            <summary>
+            constructeur FormPrincipale
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.Form1_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form1_Load : initialisation du modèle, connexion à la BD
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.Form1_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Form1_FormClosed : déconnexion à la BD
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.quitterToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur item Quitter du menu : fermeture de l'application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.gestionDesDonnéesToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            menu Gestion des données : ouverture FormGestion
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormPrincipale.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormPrincipale.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:PPE3_NotaGame.Modele">
+            <summary>
+            Classe Modele gérant la connexion et gestion avec la BD "bd_ppe3_notagame"
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Modele.#ctor">
+            <summary>
+            Modele() : constructeur permettant l'ajout des DataAdpater et DataTable nécessaires (4 nécessaires pour l'existant actuel)
+            indice 0 : récupération des noms des tables
+            indice 1 : Table Constructeur
+            indice 2 : Table Support avec jointure pour récupérer tous les libellés
+            indice 3 : Table Support
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Modele.seconnecter">
+            <summary>
+            méthode seconnecter permettant la connexion à la BD : bd_ppe3_notagame
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Modele.sedeconnecter">
+            <summary>
+            méthode sedeconnecter pour se déconnecter à la BD
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Modele.charger(System.String,System.Data.DataTable,MySql.Data.MySqlClient.MySqlDataAdapter)">
+            <summary>
+            méthode générique privée pour charger le résultat d'une requête dans un dataTable via un dataAdapter
+            Méthode appelée par charger_donnees(string table)
+            </summary>
+            <param name="requete">requete à charger</param>
+            <param name="DT">dataTable</param>
+            <param name="DA">dataAdapter</param>
+        </member>
+        <member name="M:PPE3_NotaGame.Modele.charger_donnees(System.String)">
+            <summary>
+            charge dans un DT les données de la table passée en paramètre
+            </summary>
+            <param name="table">nom de la table à requêter</param>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.Connopen">
+            <summary>
+            test si la connexion à la BD est ouverte
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.Errgrave">
+            <summary>
+            test si erreur lors de la connexion
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.Chargement">
+            <summary>
+            test si le chargement d'une requête est fait
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.DA">
+            <summary>
+            Accesseur de la collection des DataAdapter
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Modele.DT">
+            <summary>
+            Accesseur de la collection des DataTable
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:PPE3_NotaGame.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>
