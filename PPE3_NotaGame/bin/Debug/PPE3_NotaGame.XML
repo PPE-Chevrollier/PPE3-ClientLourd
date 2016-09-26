@@ -65,6 +65,23 @@
             propriété TbNom de type TextBox : Nom du constructeur
             </summary>
         </member>
+        <member name="F:PPE3_NotaGame.FormCRUDJeuxvideos.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxvideos.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxvideos.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:PPE3_NotaGame.FormCRUDSupport">
             <summary>
             FormCRUDSupport : form permettant l'ajout/modification d'un support
@@ -121,11 +138,10 @@
             propriété TbCaract de type TextBox : caractéristiques du support
             </summary>
         </member>
-        <member name="M:PPE3_NotaGame.FormCRUDUser.#ctor(System.Char)">
+        <member name="M:PPE3_NotaGame.FormCRUDUser.#ctor">
             <summary>
             constructeur FormCRUDUser 
             </summary>
-            <param name="action">c : en creation, u : en update</param>
         </member>
         <member name="F:PPE3_NotaGame.FormCRUDUser.components">
             <summary>

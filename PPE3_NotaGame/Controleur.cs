@@ -213,7 +213,7 @@ namespace PPE3_NotaGame
             }
             else
             {
-                FormCRUDUser formCRUD = new FormCRUDUser(c);  // création de la nouvelle forme
+                FormCRUDUser formCRUD = new FormCRUDUser();  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
                     // à écrire : mettre les contrôles de formCRUD à vide
@@ -269,6 +269,95 @@ namespace PPE3_NotaGame
                     }
 
                     // MessageBox.Show("OK : données enregistrées Constructeur");
+                    formCRUD.Dispose();  // on ferme la form
+                }
+                else
+                {
+                    MessageBox.Show("Annulation : aucune donnée enregistrée");
+                    formCRUD.Dispose();
+                }
+            }
+        }
+
+        public static void crud_jeuxvideos(Char c, int indice)
+        {
+            if (c == 'd')  // suppression
+            {
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce jeuxvideos " + vmodele.DT[4].Rows[indice][1].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    // on supprime l’élément du DataTable
+                    vmodele.DT[4].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[4].Update(vmodele.DT[4]);			// mise à jour du DataAdapter
+                }
+            }
+            else
+            {
+                FormCRUDJeuxvideos formCRUD = new FormCRUDJeuxvideos();  // création de la nouvelle forme
+                if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
+                {
+                    // à écrire : mettre les contrôles de formCRUD à vide
+                    formCRUD.Tb_NomJV.Clear();
+                    formCRUD.Nud_AneeSortie.Value = 2016;
+                    formCRUD.Nud_Classification.Value = 3;
+                    formCRUD.Tb_Editeur.Clear();
+                    formCRUD.Tb_Description.Clear();
+                }
+
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    // on remplit les zones par les valeurs du dataGridView correspondantes
+                    formCRUD.Tb_NomJV.Text = vmodele.DT[4].Rows[indice][1].ToString();
+                    formCRUD.Nud_AneeSortie.Value = Convert.ToInt32(vmodele.DT[4].Rows[indice][2]);
+                    formCRUD.Nud_Classification.Value = Convert.ToInt32(vmodele.DT[4].Rows[indice][3]);
+                    formCRUD.Tb_Editeur.Text = vmodele.DT[4].Rows[indice][4].ToString();
+                    formCRUD.Tb_Description.Text = vmodele.DT[4].Rows[indice][5].ToString();
+                    // mise à jour de la comboBox faite avec le nom du constructeur dans le Load de la formCRUD
+                }
+
+            eti:
+                // on affiche la nouvelle form
+                formCRUD.ShowDialog();
+
+                // si l’utilisateur clique sur OK
+                if (formCRUD.DialogResult == DialogResult.OK)
+                {
+                    if (c == 'c') // ajout
+                    {
+                        // on crée une nouvelle ligne dans le dataView
+                        if (formCRUD.Tb_NomJV.Text != "" && formCRUD.Nud_AneeSortie.Value != 0 && formCRUD.Nud_Classification.Value != 0 && formCRUD.Tb_Editeur.Text != "" && formCRUD.Tb_Description.Text != "")
+                        {
+                            DataRow NouvLigne = vmodele.DT[4].NewRow();
+                            NouvLigne["NOMJV"] = formCRUD.Tb_NomJV.Text;
+                            NouvLigne["ANNEESORTIE"] = formCRUD.Nud_AneeSortie.Value;
+                            NouvLigne["CLASSIFICATION"] = formCRUD.Nud_Classification.Value;
+                            NouvLigne["EDITEUR"] = formCRUD.Tb_Editeur.Text;
+                            NouvLigne["DESCRIPTION"] = formCRUD.Tb_Description.Text;
+
+                            vmodele.DT[4].Rows.Add(NouvLigne);
+                            vmodele.DA[4].Update(vmodele.DT[4]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Rentrer un nom au minimum", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // ne pas fermer la form : revenir avant le bouton OK
+                            goto eti;
+                        }
+                    }
+
+                    if (c == 'u')  // modif
+                    {
+                        // on met à jour le dataTable avec les nouvelles valeurs
+                        vmodele.DT[4].Rows[indice]["NOMJV"] = formCRUD.Tb_NomJV.Text;
+                        vmodele.DT[4].Rows[indice]["ANNEESORTIE"] = formCRUD.Nud_AneeSortie.Value;
+                        vmodele.DT[4].Rows[indice]["CLASSIFICATION"] = formCRUD.Nud_Classification.Value;
+                        vmodele.DT[4].Rows[indice]["EDITEUR"] = formCRUD.Tb_Editeur.Text;
+                        vmodele.DT[4].Rows[indice]["DESCRIPTION"] = formCRUD.Tb_Description.Text;
+
+                        vmodele.DA[4].Update(vmodele.DT[4]);
+                    }
+
+                    // MessageBox.Show("OK : données enregistrées jeux");
                     formCRUD.Dispose();  // on ferme la form
                 }
                 else

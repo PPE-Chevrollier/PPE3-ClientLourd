@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PPE3_NotaGame
 {
-    public partial class FormCRUDUser : Form
+    public partial class FormCRUDJeuxvideos : Form
     {
-
-        /// <summary>
-        /// constructeur FormCRUDUser 
-        /// </summary>
-        public FormCRUDUser()
+        public FormCRUDJeuxvideos()
         {
             InitializeComponent();
         }
-
     }
 }

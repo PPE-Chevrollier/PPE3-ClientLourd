@@ -70,6 +70,12 @@
     <Compile Include="FormCRUDConstructeur.designer.cs">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRUDJeuxvideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDJeuxvideos.Designer.cs">
+      <DependentUpon>FormCRUDJeuxvideos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDSupport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCRUDConstructeur.resx">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDJeuxvideos.resx">
+      <DependentUpon>FormCRUDJeuxvideos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDSupport.resx">
       <DependentUpon>FormCRUDSupport.cs</DependentUpon>
