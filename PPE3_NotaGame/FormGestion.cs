@@ -39,7 +39,7 @@ namespace PPE3_NotaGame
             if (Controleur.Vmodele.Chargement)
             {
              //   MessageBox.Show("BD chargée dans DataTable  : " + Controleur.Vmodele.DT1.Rows.Count.ToString());
-                 for (int i = 0; i < Controleur.Vmodele.DT[0].Rows.Count; i++)
+                 for (int i = 1; i < Controleur.Vmodele.DT[0].Rows.Count; i++)
                  {
                      cbTable.Items.Add(Controleur.Vmodele.DT[0].Rows[i][0].ToString());
                  }
