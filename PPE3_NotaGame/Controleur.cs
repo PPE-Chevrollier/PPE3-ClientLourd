@@ -199,6 +199,11 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// permet le crud sur la table User
+        /// </summary>
+        /// <param name="c">définit l'action : c:create, u update, d delete</param>
+        /// <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         public static void crud_user(Char c, int indice)
         {
             if (c == 'd')  // suppression
@@ -279,6 +284,11 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// permet le crud sur la table JeuxVideos
+        /// </summary>
+        /// <param name="c">définit l'action : c:create, u update, d delete</param>
+        /// <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         public static void crud_jeuxvideos(Char c, int indice)
         {
             if (c == 'd')  // suppression
@@ -367,6 +377,12 @@ namespace PPE3_NotaGame
                 }
             }
         }
+
+        /// <summary>
+        /// permet le crud sur la table Compatible
+        /// </summary>
+        /// <param name="c">définit l'action : c:create, u update, d delete</param>
+        /// <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         public static void crud_compatible(Char c, int indice)
         {
             if (c == 'd')  // suppression

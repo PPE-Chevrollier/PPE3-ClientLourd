@@ -82,12 +82,17 @@ namespace PPE3_NotaGame
         }
         #endregion
 
+        #region methodes
+
         /// <summary>
         /// Modele() : constructeur permettant l'ajout des DataAdpater et DataTable nécessaires (4 nécessaires pour l'existant actuel)
         /// indice 0 : récupération des noms des tables
         /// indice 1 : Table Constructeur
         /// indice 2 : Table Support avec jointure pour récupérer tous les libellés
-        /// indice 3 : Table Support
+        /// indice 3 : Table Compatible affichage nom
+        /// indice 4 : Table JeuxVideos
+        /// indice 5 : Table Suport
+        /// indece 6 : Table Compatible (données)
         /// </summary>
         public Modele() {
 
@@ -184,7 +189,6 @@ namespace PPE3_NotaGame
             {
                 // on charge à la fois la table complète SUPPORT pour les mises à jour et la table avec les jointures pour avoir les libellés en clair des clés étrangères
                 charger("select idS, nomS, caracteristiques, anneeSortie, nomC from support S inner join constructeur C on S.IDC = C.IDC order by idS;", dT[2], dA[2]);
-                //charger("select * from support;", dT[3], dA[3]);
             }
             if (table == "compatible")
             {
@@ -194,14 +198,13 @@ namespace PPE3_NotaGame
             if (table == "jeuxvideos")
             {
                 charger("select * from jeuxvideos;", dT[4], dA[4]);
-                //charger("select * from compatible", dT[5], dA[5]);
             }
             if (table == "users")
             {
                 charger("select * from users;", dT[5], dA[5]);
-                //charger("select * from compatible", dT[5], dA[5]);
             }
-
         }
+
+        #endregion
     }
 }

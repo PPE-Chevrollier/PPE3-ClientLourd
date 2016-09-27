@@ -12,6 +12,9 @@ namespace PPE3_NotaGame
 {
     public partial class FormCRUDJeuxvideos : Form
     {
+        /// <summary>
+        /// Constructeur de FormCRUDJeuxVideos
+        /// </summary>
         public FormCRUDJeuxvideos()
         {
             InitializeComponent();

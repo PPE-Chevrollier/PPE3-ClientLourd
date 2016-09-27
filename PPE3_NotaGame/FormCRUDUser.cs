@@ -12,7 +12,6 @@ namespace PPE3_NotaGame
 {
     public partial class FormCRUDUser : Form
     {
-
         /// <summary>
         /// constructeur FormCRUDUser 
         /// </summary>

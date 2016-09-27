@@ -148,27 +148,29 @@ namespace PPE3_NotaGame
                 // vérifier qu’une ligne est bien sélectionnée dans le dataGridView
                 if (dGvJeux.SelectedRows.Count == 1)
                 {
+                    int indice = Convert.ToInt32(dGvJeux.SelectedRows[0].Index);
+
                     if (sender == modifierToolStripMenuItem)
                     {
                         // appel de la méthode du controleur en mode update et avec la valeur de CodeFilm du film en clé
                         //   Controleur.crud_film('u', Convert.ToInt32(dGvPersonne.Rows[dGvPersonne.SelectedRows[0].Index].Cells[0].Value));
-                       
-                        if (table == "constructeur") Controleur.crud_constructeur('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "support") Controleur.crud_support('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "users") Controleur.crud_user('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "compatible") Controleur.crud_compatible('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+
+                        if (table == "constructeur") Controleur.crud_constructeur('u', indice);
+                        if (table == "support") Controleur.crud_support('u', indice);
+                        if (table == "users") Controleur.crud_user('u', indice);
+                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('u', indice);
+                        if (table == "compatible") Controleur.crud_compatible('u', indice);
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
                         // appel de la méthode du controleur en mode update et avec la valeur de CodeFilm du film en clé
                         //   Controleur.crud_film('u', Convert.ToInt32(dGvPersonne.Rows[dGvPersonne.SelectedRows[0].Index].Cells[0].Value));
                        
-                        if (table == "constructeur") Controleur.crud_constructeur('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "support") Controleur.crud_support('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "users") Controleur.crud_user('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "compatible") Controleur.crud_compatible('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "constructeur") Controleur.crud_constructeur('d', indice);
+                        if (table == "support") Controleur.crud_support('d', indice);
+                        if (table == "users") Controleur.crud_user('d', indice);
+                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('d', indice);
+                        if (table == "compatible") Controleur.crud_compatible('d', indice);
                     }
                    
                 }

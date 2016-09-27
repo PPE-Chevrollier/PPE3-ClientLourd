@@ -15,6 +15,11 @@ namespace PPE3_NotaGame
         private char c = 'c';
         private int indice = -1;
 
+        /// <summary>
+        /// Chargement de FormCRUD : remplissage des comboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCRUDCompatible_Load(object sender, EventArgs e)
         {
             // chargement des noms des constructeurs dans la comboBox
@@ -45,6 +50,11 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// constructeur FormCRUDCompatible 
+        /// </summary>
+        /// <param name="c">c : en creation, u : en update</param>
+        /// <param name="ind">indice du support sélectionné en cas d'update</param>
         public FormCRUDCompatible(char c, int ind)
         {
             InitializeComponent();

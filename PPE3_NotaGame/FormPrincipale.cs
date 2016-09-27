@@ -76,14 +76,10 @@ namespace PPE3_NotaGame
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void gestionDesDonnéesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
+        {         
             FormGestion F = new FormGestion();
            // F.MdiParent = this;
             F.Show();
-        }
-
-
-    
+        }    
     }
 }
