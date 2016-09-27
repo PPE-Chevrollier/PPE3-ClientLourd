@@ -64,17 +64,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controleur.cs" />
+    <Compile Include="FormCRUDCompatible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDCompatible.Designer.cs">
+      <DependentUpon>FormCRUDCompatible.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDConstructeur.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCRUDConstructeur.designer.cs">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRUDJeuxvideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDJeuxvideos.Designer.cs">
+      <DependentUpon>FormCRUDJeuxvideos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDSupport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCRUDSupport.designer.cs">
       <DependentUpon>FormCRUDSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRUDUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDUser.Designer.cs">
+      <DependentUpon>FormCRUDUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGestion.cs">
       <SubType>Form</SubType>
@@ -91,11 +109,20 @@
     <Compile Include="Modele.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCRUDCompatible.resx">
+      <DependentUpon>FormCRUDCompatible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDConstructeur.resx">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDJeuxvideos.resx">
+      <DependentUpon>FormCRUDJeuxvideos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDSupport.resx">
       <DependentUpon>FormCRUDSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDUser.resx">
+      <DependentUpon>FormCRUDUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestion.resx">
       <DependentUpon>FormGestion.cs</DependentUpon>

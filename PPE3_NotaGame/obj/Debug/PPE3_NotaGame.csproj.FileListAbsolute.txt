@@ -51,3 +51,50 @@ C:\Users\quent\Desktop\git\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Data.xml
 C:\Users\quent\Desktop\git\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF5.xml
 C:\Users\quent\Desktop\git\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF6.xml
 C:\Users\quent\Desktop\git\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Web.xml
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.config
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.XML
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.exe
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.pdb
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.pdb
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.CodeAnalysisLog.xml
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.lastcodeanalysissucceeded
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Data.xml
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF5.xml
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\bin\Debug\MySql.Web.xml
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csprojResolveAssemblyReference.cache
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDConstructeur.resources
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDSupport.resources
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormGestion.resources
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormPrincipale.resources
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Properties.Resources.resources
+C:\Users\ValentinJoubert\Documents\netbeans\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csproj.GenerateResource.Cache
+C:\Users\quent\Desktop\git\ClientLourd\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDUser.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.config
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.XML
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.exe
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.pdb
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.pdb
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.CodeAnalysisLog.xml
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.lastcodeanalysissucceeded
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Data.dll
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Fabric.Plugin.dll
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Web.dll
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Data.xml
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF5.xml
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\bin\Debug\MySql.Web.xml
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csprojResolveAssemblyReference.cache
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDConstructeur.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDSupport.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDUser.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormGestion.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormPrincipale.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Properties.Resources.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csproj.GenerateResource.Cache
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDJeuxvideos.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCompatible.resources

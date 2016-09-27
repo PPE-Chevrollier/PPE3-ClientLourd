@@ -39,7 +39,7 @@ namespace PPE3_NotaGame
             if (Controleur.Vmodele.Chargement)
             {
              //   MessageBox.Show("BD chargée dans DataTable  : " + Controleur.Vmodele.DT1.Rows.Count.ToString());
-                 for (int i = 0; i < Controleur.Vmodele.DT[0].Rows.Count; i++)
+                 for (int i = 1; i < Controleur.Vmodele.DT[0].Rows.Count; i++)
                  {
                      cbTable.Items.Add(Controleur.Vmodele.DT[0].Rows[i][0].ToString());
                  }
@@ -72,12 +72,41 @@ namespace PPE3_NotaGame
                     {
                         bindingSource1.DataSource = Controleur.Vmodele.DT[2];
                         dGvJeux.DataSource = bindingSource1;
-                        dGvJeux.Columns["IDS"].HeaderText = "Id Support";
+                        dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
                         dGvJeux.Columns["NOMC"].HeaderText = "Nom_Constructeur";
                         dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
                         dGvJeux.Columns["CARACTERISTIQUES"].HeaderText = "Caractéristiques";
                         dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Année_Sortie";
                        
+                    }
+                    else if (table == "compatible")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[3];
+                        dGvJeux.DataSource = bindingSource1;
+                        //dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
+                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_jeuxvideo";
+                        //dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
+                        dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
+                    }
+                    else if (table == "jeuxvideos")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[4];
+                        dGvJeux.DataSource = bindingSource1;
+                        dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
+                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_JeuxVideo";
+                        dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Annee_de_sortie";
+                        dGvJeux.Columns["CLASSIFICATION"].HeaderText = "Classification";
+                        dGvJeux.Columns["EDITEUR"].HeaderText = "Editeur";
+                        dGvJeux.Columns["DESCRIPTION"].HeaderText = "Description";
+                    }
+                    else if (table == "users")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[5];
+                        dGvJeux.DataSource = bindingSource1;
+                        dGvJeux.Columns["IDU"].HeaderText = "Id_users";
+                        dGvJeux.Columns["EMAIL"].HeaderText = "Email";
+                        dGvJeux.Columns["PSEUDO"].HeaderText = "Pseudo";
+                        dGvJeux.Columns["COMMUNAUTE"].HeaderText = "Communaute";
                     }
 
                     // mise à jour du dataGridView via le bindingSource rempli par le DataTable
@@ -110,27 +139,38 @@ namespace PPE3_NotaGame
               
                 if (table == "constructeur") Controleur.crud_constructeur('c', -1);
                 if (table == "support") Controleur.crud_support('c', -1);
+                if (table == "users") Controleur.crud_user('c', -1);
+                if (table == "jeuxvideos") Controleur.crud_jeuxvideos('c', -1);
+                if (table == "compatible") Controleur.crud_compatible('c', -1);
             }
             else
             {
                 // vérifier qu’une ligne est bien sélectionnée dans le dataGridView
                 if (dGvJeux.SelectedRows.Count == 1)
                 {
+                    int indice = Convert.ToInt32(dGvJeux.SelectedRows[0].Index);
+
                     if (sender == modifierToolStripMenuItem)
                     {
                         // appel de la méthode du controleur en mode update et avec la valeur de CodeFilm du film en clé
                         //   Controleur.crud_film('u', Convert.ToInt32(dGvPersonne.Rows[dGvPersonne.SelectedRows[0].Index].Cells[0].Value));
-                       
-                        if (table == "constructeur") Controleur.crud_constructeur('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "support") Controleur.crud_support('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+
+                        if (table == "constructeur") Controleur.crud_constructeur('u', indice);
+                        if (table == "support") Controleur.crud_support('u', indice);
+                        if (table == "users") Controleur.crud_user('u', indice);
+                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('u', indice);
+                        if (table == "compatible") Controleur.crud_compatible('u', indice);
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
                         // appel de la méthode du controleur en mode update et avec la valeur de CodeFilm du film en clé
                         //   Controleur.crud_film('u', Convert.ToInt32(dGvPersonne.Rows[dGvPersonne.SelectedRows[0].Index].Cells[0].Value));
                        
-                        if (table == "constructeur") Controleur.crud_constructeur('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
-                        if (table == "support") Controleur.crud_support('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "constructeur") Controleur.crud_constructeur('d', indice);
+                        if (table == "support") Controleur.crud_support('d', indice);
+                        if (table == "users") Controleur.crud_user('d', indice);
+                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('d', indice);
+                        if (table == "compatible") Controleur.crud_compatible('d', indice);
                     }
                    
                 }
