@@ -189,7 +189,7 @@ namespace PPE3_NotaGame
             if (table == "compatible")
             {
                 charger("select NOMJV,NOMS from compatible AS C INNER JOIN jeuxvideos AS V ON C.IDJV=V.IDJV INNER JOIN support AS s ON C.IDS=s.IDS;", dT[3], dA[3]);
-                //charger("select * from compatible;", dT[5], dA[5]);
+                charger("select * from compatible;", dT[6], dA[6]);
             }
             if (table == "jeuxvideos")
             {

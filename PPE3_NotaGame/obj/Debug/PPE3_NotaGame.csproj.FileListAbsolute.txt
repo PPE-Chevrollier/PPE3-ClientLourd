@@ -97,3 +97,4 @@ C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame
 C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Properties.Resources.resources
 C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csproj.GenerateResource.Cache
 C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDJeuxvideos.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCompatible.resources

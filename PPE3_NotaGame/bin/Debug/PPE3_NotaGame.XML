@@ -33,6 +33,23 @@
             <param name="c">définit l'action : c:create, u update, d delete </param>
             <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         </member>
+        <member name="F:PPE3_NotaGame.FormCRUDCompatible.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCompatible.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCompatible.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:PPE3_NotaGame.FormCRUDConstructeur">
             <summary>
             FormCRUDConstructeur : feuille qui permet la gestion Ajout/modification d'un constructeur de jeux vidéos
