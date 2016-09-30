@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace PPE3_NotaGame
 {
+    /// <summary>
+    /// class CRUD users
+    /// </summary>
     public partial class FormCRUDUser : Form
     {
         /// <summary>

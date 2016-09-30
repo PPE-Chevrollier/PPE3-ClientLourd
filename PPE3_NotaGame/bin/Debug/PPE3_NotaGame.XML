@@ -33,6 +33,46 @@
             <param name="c">définit l'action : c:create, u update, d delete </param>
             <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_user(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table User
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete</param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_jeuxvideos(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table JeuxVideos
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete</param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_compatible(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table Compatible
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete</param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
+        <member name="T:PPE3_NotaGame.FormCRUDCompatible">
+            <summary>
+            Class CRUD compatible
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCompatible.FormCRUDCompatible_Load(System.Object,System.EventArgs)">
+            <summary>
+            Chargement de FormCRUD : remplissage des comboBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCompatible.#ctor(System.Char,System.Int32)">
+            <summary>
+            constructeur FormCRUDCompatible 
+            </summary>
+            <param name="c">c : en creation, u : en update</param>
+            <param name="ind">indice du support sélectionné en cas d'update</param>
+        </member>
         <member name="F:PPE3_NotaGame.FormCRUDCompatible.components">
             <summary>
             Required designer variable.
@@ -48,6 +88,16 @@
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDCompatible.Cb_JeuxVideos">
+            <summary>
+            Accesseur de cb_jv
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDCompatible.Cb_Support">
+            <summary>
+            accesseur cb support
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormCRUDConstructeur">
@@ -82,6 +132,16 @@
             propriété TbNom de type TextBox : Nom du constructeur
             </summary>
         </member>
+        <member name="T:PPE3_NotaGame.FormCRUDJeuxvideos">
+            <summary>
+            Class CRUD jv
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxvideos.#ctor">
+            <summary>
+            Constructeur de FormCRUDJeuxVideos
+            </summary>
+        </member>
         <member name="F:PPE3_NotaGame.FormCRUDJeuxvideos.components">
             <summary>
             Required designer variable.
@@ -97,6 +157,31 @@
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDJeuxvideos.Tb_NomJV">
+            <summary>
+            accesseur de nom jv 
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDJeuxvideos.Nud_AneeSortie">
+            <summary>
+            accesseur annesortie
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDJeuxvideos.Nud_Classification">
+            <summary>
+            accesseur classification
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDJeuxvideos.Tb_Editeur">
+            <summary>
+            accessseur editeur
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDJeuxvideos.Tb_Description">
+            <summary>
+            accesseur description
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormCRUDSupport">
@@ -155,6 +240,11 @@
             propriété TbCaract de type TextBox : caractéristiques du support
             </summary>
         </member>
+        <member name="T:PPE3_NotaGame.FormCRUDUser">
+            <summary>
+            class CRUD users
+            </summary>
+        </member>
         <member name="M:PPE3_NotaGame.FormCRUDUser.#ctor">
             <summary>
             constructeur FormCRUDUser 
@@ -175,6 +265,21 @@
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDUser.Tb_Email">
+            <summary>
+            accesseur email
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDUser.Tb_Pseudo">
+            <summary>
+            accesseur pseudo
+            </summary>
+        </member>
+        <member name="P:PPE3_NotaGame.FormCRUDUser.Tb_Communaute">
+            <summary>
+            accessseur communaute
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormGestion">
@@ -316,7 +421,10 @@
             indice 0 : récupération des noms des tables
             indice 1 : Table Constructeur
             indice 2 : Table Support avec jointure pour récupérer tous les libellés
-            indice 3 : Table Support
+            indice 3 : Table Compatible affichage nom
+            indice 4 : Table JeuxVideos
+            indice 5 : Table Suport
+            indece 6 : Table Compatible (données)
             </summary>
         </member>
         <member name="M:PPE3_NotaGame.Modele.seconnecter">

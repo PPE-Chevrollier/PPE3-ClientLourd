@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace PPE3_NotaGame
 {
+    /// <summary>
+    /// Class CRUD jv
+    /// </summary>
     public partial class FormCRUDJeuxvideos : Form
     {
         /// <summary>

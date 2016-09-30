@@ -139,6 +139,9 @@ namespace PPE3_NotaGame
         private Button btnAnnuler;
         private Button btnOK;
 
+        /// <summary>
+        /// accesseur email
+        /// </summary>
         public TextBox Tb_Email
         {
             get
@@ -152,6 +155,9 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// accesseur pseudo
+        /// </summary>
         public TextBox Tb_Pseudo
         {
             get
@@ -165,6 +171,9 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// accessseur communaute
+        /// </summary>
         public TextBox Tb_Communaute
         {
             get

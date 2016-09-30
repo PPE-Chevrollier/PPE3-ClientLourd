@@ -2,6 +2,9 @@
 
 namespace PPE3_NotaGame
 {
+    /// <summary>
+    /// Class CRUD compatible
+    /// </summary>
     partial class FormCRUDCompatible
     {
         /// <summary>
@@ -120,6 +123,9 @@ namespace PPE3_NotaGame
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnOK;
 
+        /// <summary>
+        /// Accesseur de cb_jv
+        /// </summary>
         public ComboBox Cb_JeuxVideos
         {
             get
@@ -133,6 +139,9 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// accesseur cb support
+        /// </summary>
         public ComboBox Cb_Support
         {
             get

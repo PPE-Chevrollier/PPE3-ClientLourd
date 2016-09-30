@@ -205,6 +205,9 @@ namespace PPE3_NotaGame
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnOK;
 
+        /// <summary>
+        /// accesseur de nom jv 
+        /// </summary>
         public TextBox Tb_NomJV
         {
             get
@@ -218,6 +221,9 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// accesseur annesortie
+        /// </summary>
         public NumericUpDown Nud_AneeSortie
         {
             get
@@ -231,6 +237,9 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// accesseur classification
+        /// </summary>
         public NumericUpDown Nud_Classification
         {
             get
@@ -243,7 +252,9 @@ namespace PPE3_NotaGame
                 nud_Classification = value;
             }
         }
-
+        /// <summary>
+        /// accessseur editeur
+        /// </summary>
         public TextBox Tb_Editeur
         {
             get
@@ -257,6 +268,9 @@ namespace PPE3_NotaGame
             }
         }
 
+        /// <summary>
+        /// accesseur description
+        /// </summary>
         public TextBox Tb_Description
         {
             get
