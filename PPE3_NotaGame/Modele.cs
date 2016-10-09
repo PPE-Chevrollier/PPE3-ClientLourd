@@ -21,13 +21,23 @@ namespace PPE3_NotaGame
         private bool errgrave = false;          // test si erreur lors de la connexion
         private bool chargement = false;        // test si le chargement d'une requête est fait
 
-        // les DataAdapter et DataTable seront gérés dans des collection avec pour chaque un indice correspondant :
-        // indice 0 : récupération des noms des tables
-        // indice 1 : Table Constructeur
-        // indice 2 : Table Support avec jointure pour récupérer tous les libellés
-        // indice 3 : Table Support
-
-        // collection de DataAdapter
+        /// <summary>
+        /// les DataAdapter et DataTable seront gérés dans des collection avec pour chaque un indice correspondant :
+        /// indice 0 : récupération des noms des tables
+        /// indice 1 : Table Constructeur
+        /// indice 2 : Table Support avec jointure pour récupérer tous les libellés
+        /// indice 3 : Table Support
+        /// indice 4 : Table compatible avec jointure pour récupérer tous les libellés
+        /// indice 5 : Table compatible
+        /// indice 6 : Table jeuxvideo
+        /// indice 7 : Table users avec jointure pour récupérer tous les libellés
+        /// indice 8 : Table users
+        /// indice 9 : Table communaute
+        /// indice 10 : Table genre
+        /// indice 11 : Table correspondre avec jointure pour récupérer tous les libellés
+        /// indice 12 : Table correspondre
+        /// collection de DataAdapter
+        /// </summary>
         private List<MySqlDataAdapter> dA = new List<MySqlDataAdapter>(); 
     
         // collection de DataTable récupérant les données correspond au DA associé
@@ -89,14 +99,20 @@ namespace PPE3_NotaGame
         /// indice 0 : récupération des noms des tables
         /// indice 1 : Table Constructeur
         /// indice 2 : Table Support avec jointure pour récupérer tous les libellés
-        /// indice 3 : Table Compatible affichage nom
-        /// indice 4 : Table JeuxVideos
-        /// indice 5 : Table Suport
-        /// indece 6 : Table Compatible (données)
+        /// indice 3 : Table Support
+        /// indice 4 : Table compatible avec jointure pour récupérer tous les libellés
+        /// indice 5 : Table compatible
+        /// indice 6 : Table jeuxvideo
+        /// indice 7 : Table users avec jointure pour récupérer tous les libellés
+        /// indice 8 : Table users
+        /// indice 9 : Table communaute
+        /// indice 10 : Table genre
+        /// indice 11 : Table correspondre avec jointure pour récupérer tous les libellés
+        /// indice 12 : Table correspondre
         /// </summary>
         public Modele() {
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 13; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -177,31 +193,39 @@ namespace PPE3_NotaGame
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
 
-            if (table == "toutes")
+            switch (table)
             {
-                charger("show tables;", dT[0], dA[0]);
-            }
-            if (table == "constructeur")
-            {
-                charger("select * from constructeur;", dT[1], dA[1]);
-            }
-            if (table == "support")
-            {
-                // on charge à la fois la table complète SUPPORT pour les mises à jour et la table avec les jointures pour avoir les libellés en clair des clés étrangères
-                charger("select idS, nomS, caracteristiques, anneeSortie, nomC from support S inner join constructeur C on S.IDC = C.IDC order by idS;", dT[2], dA[2]);
-            }
-            if (table == "compatible")
-            {
-                charger("select NOMJV,NOMS from compatible AS C INNER JOIN jeuxvideos AS V ON C.IDJV=V.IDJV INNER JOIN support AS s ON C.IDS=s.IDS;", dT[3], dA[3]);
-                charger("select * from compatible;", dT[6], dA[6]);
-            }
-            if (table == "jeuxvideos")
-            {
-                charger("select * from jeuxvideos;", dT[4], dA[4]);
-            }
-            if (table == "users")
-            {
-                charger("select * from users;", dT[5], dA[5]);
+                case "toutes":
+                    charger("show tables;", dT[0], dA[0]);
+                    break;
+                case "constructeur":
+                    charger("select * from constructeur;", dT[1], dA[1]);
+                    break;
+                case "support":
+                    charger("select idS, nomS, caracteristiques, anneeSortie, nomC from support S inner join constructeur C on S.IDC = C.IDC order by idS;", dT[2], dA[2]);
+                    charger("select * from support;", dT[3], dA[3]);
+                    break;
+                case "compatible":
+                    charger("select NOMJV,NOMS from compatible AS C INNER JOIN jeuxvideos AS V ON C.IDJV=V.IDJV INNER JOIN support AS s ON C.IDS=s.IDS order by C.IDJV, C.IDS;", dT[4], dA[4]);
+                    charger("select * from compatible order by idjv, ids;", dT[5], dA[5]);
+                    break;
+                case "jeuxvideos":
+                    charger("select * from jeuxvideos;", dT[6], dA[6]);
+                    break;
+                case "users":
+                    charger("select IDU,EMAIL, PSEUDO, LIBELLE from users AS u INNER JOIN communaute AS c ON u.IDCO=c.IDCO order by IDU;", dT[7], dA[7]);
+                    charger("select * from users;", dT[8], dA[8]);
+                    break;
+                case "communaute":
+                    charger("select * from communaute;", dT[9], dA[9]);
+                    break;
+                case "genre":
+                    charger("select * from genre;", dT[10], dA[10]);
+                    break;
+                case "correspondre":
+                    charger("select G.LIBELLE, J.NOMJV FROM correspondre C INNER JOIN genre G ON G.IDGENRE = C.IDGENRE INNER JOIN jeuxvideos J ON J.IDJV = C.IDJV ORDER BY C.IDGENRE, C.IDJV;", dT[11], dA[11]);
+                    charger("select * from correspondre order by idgenre, idjv;", dT[12], dA[12]);
+                    break;
             }
         }
 

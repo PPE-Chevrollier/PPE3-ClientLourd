@@ -15,7 +15,13 @@ namespace PPE3_NotaGame
     /// </summary>
     public partial class FormGestion : Form
     {
+        #region propriete
+
         private BindingSource bindingSource1;
+
+        #endregion
+
+        #region methodes
 
         /// <summary>
         /// Constructeur FormGestion
@@ -45,7 +51,18 @@ namespace PPE3_NotaGame
                  }
             }
         }
-    
+
+        /// <summary>
+        /// Rend les colones non triables
+        /// </summary>
+        private void columnNotStoratble()
+        {
+            foreach (DataGridViewColumn column in dGvJeux.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
         /// <summary>
         /// évènement SelectedIndexChanged : à la sélection d'une table, on charge les données de la BD correspondantes dans le dataGridView 
         /// </summary>
@@ -61,56 +78,73 @@ namespace PPE3_NotaGame
                 {
                     // un DT par table
                     bindingSource1 = new BindingSource();
-                    if (table == "constructeur")
+
+                    switch (table)
                     {
-                        bindingSource1.DataSource = Controleur.Vmodele.DT[1];
-                        dGvJeux.DataSource = bindingSource1;
-                        dGvJeux.Columns["IDC"].HeaderText = "Identifiant";
-                        dGvJeux.Columns["NOMC"].HeaderText = "Nom_Constructeur";
-                    }
-                    else if (table == "support")
-                    {
-                        bindingSource1.DataSource = Controleur.Vmodele.DT[2];
-                        dGvJeux.DataSource = bindingSource1;
-                        dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
-                        dGvJeux.Columns["NOMC"].HeaderText = "Nom_Constructeur";
-                        dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
-                        dGvJeux.Columns["CARACTERISTIQUES"].HeaderText = "Caractéristiques";
-                        dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Année_Sortie";
-                       
-                    }
-                    else if (table == "compatible")
-                    {
-                        bindingSource1.DataSource = Controleur.Vmodele.DT[3];
-                        dGvJeux.DataSource = bindingSource1;
-                        //dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
-                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_jeuxvideo";
-                        //dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
-                        dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
-                    }
-                    else if (table == "jeuxvideos")
-                    {
-                        bindingSource1.DataSource = Controleur.Vmodele.DT[4];
-                        dGvJeux.DataSource = bindingSource1;
-                        dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
-                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_JeuxVideo";
-                        dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Annee_de_sortie";
-                        dGvJeux.Columns["CLASSIFICATION"].HeaderText = "Classification";
-                        dGvJeux.Columns["EDITEUR"].HeaderText = "Editeur";
-                        dGvJeux.Columns["DESCRIPTION"].HeaderText = "Description";
-                    }
-                    else if (table == "users")
-                    {
-                        bindingSource1.DataSource = Controleur.Vmodele.DT[5];
-                        dGvJeux.DataSource = bindingSource1;
-                        dGvJeux.Columns["IDU"].HeaderText = "Id_users";
-                        dGvJeux.Columns["EMAIL"].HeaderText = "Email";
-                        dGvJeux.Columns["PSEUDO"].HeaderText = "Pseudo";
-                        dGvJeux.Columns["COMMUNAUTE"].HeaderText = "Communaute";
+                        case "constructeur":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[1];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["IDC"].HeaderText = "Identifiant";
+                            dGvJeux.Columns["NOMC"].HeaderText = "Nom_Constructeur";
+                            break;
+                        case "support":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[2];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
+                            dGvJeux.Columns["NOMC"].HeaderText = "Nom_Constructeur";
+                            dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
+                            dGvJeux.Columns["CARACTERISTIQUES"].HeaderText = "Caractéristiques";
+                            dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Année_Sortie";
+                            break;
+                        case "compatible":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[4];
+                            dGvJeux.DataSource = bindingSource1;
+                            //dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
+                            dGvJeux.Columns["NOMJV"].HeaderText = "Nom_jeuxvideo";
+                            //dGvJeux.Columns["IDS"].HeaderText = "Id_Support";
+                            dGvJeux.Columns["NOMS"].HeaderText = "Nom_Support";
+                            break;
+                        case "jeuxvideos":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[6];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["IDJV"].HeaderText = "Id_jeuxvideo";
+                            dGvJeux.Columns["NOMJV"].HeaderText = "Nom_JeuxVideo";
+                            dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Annee_de_sortie";
+                            dGvJeux.Columns["CLASSIFICATION"].HeaderText = "Classification";
+                            dGvJeux.Columns["EDITEUR"].HeaderText = "Editeur";
+                            dGvJeux.Columns["DESCRIPTION"].HeaderText = "Description";
+                            break;
+                        case "users":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[7];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["IDU"].HeaderText = "Id_users";
+                            dGvJeux.Columns["EMAIL"].HeaderText = "Email";
+                            dGvJeux.Columns["PSEUDO"].HeaderText = "Pseudo";
+                            dGvJeux.Columns["LIBELLE"].HeaderText = "Communaute";
+                            break;
+                        case "communaute":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[9];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["IDCO"].HeaderText = "Id de comunaute";
+                            dGvJeux.Columns["LIBELLE"].HeaderText = "Libelle";
+                            break;
+                        case "genre":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[10];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["IDGENRE"].HeaderText = "Id de genre";
+                            dGvJeux.Columns["LIBELLE"].HeaderText = "Libelle";
+                            break;
+                        case "correspondre":
+                            bindingSource1.DataSource = Controleur.Vmodele.DT[11];
+                            dGvJeux.DataSource = bindingSource1;
+                            dGvJeux.Columns["LIBELLE"].HeaderText = "Genre";
+                            dGvJeux.Columns["NOMJV"].HeaderText = "Jeux video";
+                            break;
                     }
 
                     // mise à jour du dataGridView via le bindingSource rempli par le DataTable
                     dGvJeux.Refresh();
+                    columnNotStoratble();
                     dGvJeux.Visible = true;
                 }
                 else
@@ -142,6 +176,9 @@ namespace PPE3_NotaGame
                 if (table == "users") Controleur.crud_user('c', -1);
                 if (table == "jeuxvideos") Controleur.crud_jeuxvideos('c', -1);
                 if (table == "compatible") Controleur.crud_compatible('c', -1);
+                if (table == "communaute") Controleur.crud_communaute('c', -1);
+                if (table == "genre") Controleur.crud_genre('c', -1);
+                if (table == "correspondre") Controleur.crud_correspondre('c', -1);
             }
             else
             {
@@ -160,6 +197,9 @@ namespace PPE3_NotaGame
                         if (table == "users") Controleur.crud_user('u', indice);
                         if (table == "jeuxvideos") Controleur.crud_jeuxvideos('u', indice);
                         if (table == "compatible") Controleur.crud_compatible('u', indice);
+                        if (table == "communaute") Controleur.crud_communaute('u', indice);
+                        if (table == "genre") Controleur.crud_genre('u', indice);
+                        if (table == "correspondre") Controleur.crud_correspondre('u', indice);
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
@@ -171,6 +211,9 @@ namespace PPE3_NotaGame
                         if (table == "users") Controleur.crud_user('d', indice);
                         if (table == "jeuxvideos") Controleur.crud_jeuxvideos('d', indice);
                         if (table == "compatible") Controleur.crud_compatible('d', indice);
+                        if (table == "communaute") Controleur.crud_communaute('d', indice);
+                        if (table == "genre") Controleur.crud_genre('d', indice);
+                        if (table == "correspondre") Controleur.crud_correspondre('d', indice);
                     }
                    
                 }
@@ -187,5 +230,7 @@ namespace PPE3_NotaGame
             bindingSource1.MoveFirst();
             dGvJeux.Refresh();
         }
+
+        #endregion
     }
 }

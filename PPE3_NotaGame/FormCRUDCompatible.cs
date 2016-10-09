@@ -16,15 +16,22 @@ namespace PPE3_NotaGame
         private int indice = -1;
 
         /// <summary>
-        /// Chargement de FormCRUD : remplissage des comboBox
+        /// Crud compatible
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="action"></param>
+        /// <param name="ind"></param>
+        public FormCRUDCompatible(char action, int ind)
+        {
+            InitializeComponent();
+            c = action;
+            indice = ind;
+        }
+
         private void FormCRUDCompatible_Load(object sender, EventArgs e)
         {
             // chargement des noms des constructeurs dans la comboBox
-            Cb_JeuxVideos.Items.Clear();
-            Cb_Support.Items.Clear();
+            cb_JeuxVideos.Items.Clear();
+            cb_Support.Items.Clear();
 
             Controleur.Vmodele.charger_donnees("jeuxvideos");
             Controleur.Vmodele.charger_donnees("support");
@@ -32,35 +39,23 @@ namespace PPE3_NotaGame
             if (Controleur.Vmodele.Chargement)
             {
                 // parcours du DataTable des constructeurs pour remplir la comboBox
-                for (int i = 0; i < Controleur.Vmodele.DT[4].Rows.Count; i++)
+                for (int i = 0; i < Controleur.Vmodele.DT[6].Rows.Count; i++)
                 {
-                    Cb_JeuxVideos.Items.Add(Controleur.Vmodele.DT[4].Rows[i]["NomJV"].ToString());
+                    cb_JeuxVideos.Items.Add(Controleur.Vmodele.DT[6].Rows[i]["NomJV"].ToString());
                 }
 
-                for (int i = 0; i < Controleur.Vmodele.DT[2].Rows.Count; i++)
+                for (int i = 0; i < Controleur.Vmodele.DT[3].Rows.Count; i++)
                 {
-                    Cb_Support.Items.Add(Controleur.Vmodele.DT[2].Rows[i]["NomS"].ToString());
+                    cb_Support.Items.Add(Controleur.Vmodele.DT[3].Rows[i]["NomS"].ToString());
                 }
 
             }
             // si update : affichage du constructeur correspondant
-            if (c == 'u') {
-                Cb_JeuxVideos.SelectedItem = Controleur.Vmodele.DT[3].Rows[indice][0];
-                Cb_Support.SelectedItem = Controleur.Vmodele.DT[3].Rows[indice][1];
+            if (c == 'u')
+            {
+                cb_JeuxVideos.SelectedItem = Controleur.Vmodele.DT[4].Rows[indice][0];
+                cb_Support.SelectedItem = Controleur.Vmodele.DT[4].Rows[indice][1];
             }
         }
-
-        /// <summary>
-        /// constructeur FormCRUDCompatible 
-        /// </summary>
-        /// <param name="c">c : en creation, u : en update</param>
-        /// <param name="ind">indice du support sélectionné en cas d'update</param>
-        public FormCRUDCompatible(char c, int ind)
-        {
-            InitializeComponent();
-            indice = ind;
-            this.c = c;
-        }
-
     }
 }
