@@ -32,12 +32,12 @@ namespace PPE3_NotaGame
         {
             this.lb_Email = new System.Windows.Forms.Label();
             this.lb_Pseudo = new System.Windows.Forms.Label();
-            this.lb_Communaute = new System.Windows.Forms.Label();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_Pseudo = new System.Windows.Forms.TextBox();
-            this.tb_Communaute = new System.Windows.Forms.TextBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
+            this.lb_Communaute = new System.Windows.Forms.Label();
+            this.cb_Communaute = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lb_Email
@@ -58,15 +58,6 @@ namespace PPE3_NotaGame
             this.lb_Pseudo.TabIndex = 1;
             this.lb_Pseudo.Text = "Pseudo :";
             // 
-            // lb_Communaute
-            // 
-            this.lb_Communaute.AutoSize = true;
-            this.lb_Communaute.Location = new System.Drawing.Point(38, 163);
-            this.lb_Communaute.Name = "lb_Communaute";
-            this.lb_Communaute.Size = new System.Drawing.Size(78, 13);
-            this.lb_Communaute.TabIndex = 2;
-            this.lb_Communaute.Text = "Communauté : ";
-            // 
             // tb_Email
             // 
             this.tb_Email.Location = new System.Drawing.Point(125, 58);
@@ -80,13 +71,6 @@ namespace PPE3_NotaGame
             this.tb_Pseudo.Name = "tb_Pseudo";
             this.tb_Pseudo.Size = new System.Drawing.Size(100, 20);
             this.tb_Pseudo.TabIndex = 4;
-            // 
-            // tb_Communaute
-            // 
-            this.tb_Communaute.Location = new System.Drawing.Point(122, 163);
-            this.tb_Communaute.Name = "tb_Communaute";
-            this.tb_Communaute.Size = new System.Drawing.Size(100, 20);
-            this.tb_Communaute.TabIndex = 5;
             // 
             // btnAnnuler
             // 
@@ -108,14 +92,31 @@ namespace PPE3_NotaGame
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
+            // lb_Communaute
+            // 
+            this.lb_Communaute.AutoSize = true;
+            this.lb_Communaute.Location = new System.Drawing.Point(38, 163);
+            this.lb_Communaute.Name = "lb_Communaute";
+            this.lb_Communaute.Size = new System.Drawing.Size(78, 13);
+            this.lb_Communaute.TabIndex = 2;
+            this.lb_Communaute.Text = "Communauté : ";
+            // 
+            // cb_Communaute
+            // 
+            this.cb_Communaute.FormattingEnabled = true;
+            this.cb_Communaute.Location = new System.Drawing.Point(119, 160);
+            this.cb_Communaute.Name = "cb_Communaute";
+            this.cb_Communaute.Size = new System.Drawing.Size(121, 21);
+            this.cb_Communaute.TabIndex = 14;
+            // 
             // FormCRUDUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.cb_Communaute);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.tb_Communaute);
             this.Controls.Add(this.tb_Pseudo);
             this.Controls.Add(this.tb_Email);
             this.Controls.Add(this.lb_Communaute);
@@ -123,6 +124,7 @@ namespace PPE3_NotaGame
             this.Controls.Add(this.lb_Email);
             this.Name = "FormCRUDUser";
             this.Text = "FormCRUDUser";
+            this.Load += new System.EventHandler(this.FormCRUDUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,12 +134,12 @@ namespace PPE3_NotaGame
 
         private System.Windows.Forms.Label lb_Email;
         private System.Windows.Forms.Label lb_Pseudo;
-        private System.Windows.Forms.Label lb_Communaute;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_Pseudo;
-        private System.Windows.Forms.TextBox tb_Communaute;
         private Button btnAnnuler;
         private Button btnOK;
+        private Label lb_Communaute;
+        private ComboBox cb_Communaute;
 
         /// <summary>
         /// accesseur email
@@ -172,19 +174,23 @@ namespace PPE3_NotaGame
         }
 
         /// <summary>
-        /// accessseur communaute
+        /// Accesseur communaute
         /// </summary>
-        public TextBox Tb_Communaute
+        public ComboBox Cb_Communaute
         {
             get
             {
-                return tb_Communaute;
+                return cb_Communaute;
             }
 
             set
             {
-                tb_Communaute = value;
+                cb_Communaute = value;
             }
         }
+
+        /// <summary>
+        /// accessseur communaute
+        /// </summary>
     }
 }

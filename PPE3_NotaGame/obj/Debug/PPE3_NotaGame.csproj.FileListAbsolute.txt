@@ -120,3 +120,6 @@ C:\Users\ValentinJoubert\Desktop\Nouveau dossier\PPE3_NotaGame\obj\Debug\PPE3_No
 C:\Users\ValentinJoubert\Desktop\Nouveau dossier\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormPrincipale.resources
 C:\Users\ValentinJoubert\Desktop\Nouveau dossier\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Properties.Resources.resources
 C:\Users\ValentinJoubert\Desktop\Nouveau dossier\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csproj.GenerateResource.Cache
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCommunaute.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDGenre.resources
+C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCorrespondre.resources

@@ -64,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controleur.cs" />
+    <Compile Include="FormCRUDCommunaute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDCommunaute.Designer.cs">
+      <DependentUpon>FormCRUDCommunaute.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDCompatible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,18 @@
     </Compile>
     <Compile Include="FormCRUDConstructeur.designer.cs">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRUDCorrespondre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDCorrespondre.Designer.cs">
+      <DependentUpon>FormCRUDCorrespondre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRUDGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDGenre.Designer.cs">
+      <DependentUpon>FormCRUDGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCRUDJeuxvideos.cs">
       <SubType>Form</SubType>
@@ -109,11 +127,20 @@
     <Compile Include="Modele.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCRUDCommunaute.resx">
+      <DependentUpon>FormCRUDCommunaute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDCompatible.resx">
       <DependentUpon>FormCRUDCompatible.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDConstructeur.resx">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDCorrespondre.resx">
+      <DependentUpon>FormCRUDCorrespondre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDGenre.resx">
+      <DependentUpon>FormCRUDGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDJeuxvideos.resx">
       <DependentUpon>FormCRUDJeuxvideos.cs</DependentUpon>

@@ -54,24 +54,50 @@
             <param name="c">définit l'action : c:create, u update, d delete</param>
             <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         </member>
-        <member name="T:PPE3_NotaGame.FormCRUDCompatible">
+        <member name="M:PPE3_NotaGame.Controleur.crud_communaute(System.Char,System.Int32)">
             <summary>
-            Class CRUD compatible
+            permet le crud sur la table communaute
+            </summary>
+            <param name="c"></param>
+            <param name="indice"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_genre(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table communaute
+            </summary>
+            <param name="c"></param>
+            <param name="indice"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_correspondre(System.Char,System.Int32)">
+            <summary>
+            Premet le crud de la table correspondre
+            </summary>
+            <param name="c"></param>
+            <param name="indice"></param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDCommunaute.components">
+            <summary>
+            Required designer variable.
             </summary>
         </member>
-        <member name="M:PPE3_NotaGame.FormCRUDCompatible.FormCRUDCompatible_Load(System.Object,System.EventArgs)">
+        <member name="M:PPE3_NotaGame.FormCRUDCommunaute.Dispose(System.Boolean)">
             <summary>
-            Chargement de FormCRUD : remplissage des comboBox
+            Clean up any resources being used.
             </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCommunaute.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
         </member>
         <member name="M:PPE3_NotaGame.FormCRUDCompatible.#ctor(System.Char,System.Int32)">
             <summary>
-            constructeur FormCRUDCompatible 
+            Crud compatible
             </summary>
-            <param name="c">c : en creation, u : en update</param>
-            <param name="ind">indice du support sélectionné en cas d'update</param>
+            <param name="action"></param>
+            <param name="ind"></param>
         </member>
         <member name="F:PPE3_NotaGame.FormCRUDCompatible.components">
             <summary>
@@ -88,16 +114,6 @@
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="P:PPE3_NotaGame.FormCRUDCompatible.Cb_JeuxVideos">
-            <summary>
-            Accesseur de cb_jv
-            </summary>
-        </member>
-        <member name="P:PPE3_NotaGame.FormCRUDCompatible.Cb_Support">
-            <summary>
-            accesseur cb support
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormCRUDConstructeur">
@@ -130,6 +146,40 @@
         <member name="P:PPE3_NotaGame.FormCRUDConstructeur.TbNom">
             <summary>
             propriété TbNom de type TextBox : Nom du constructeur
+            </summary>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDCorrespondre.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCorrespondre.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDCorrespondre.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDGenre.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDGenre.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDGenre.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormCRUDJeuxvideos">
@@ -245,7 +295,7 @@
             class CRUD users
             </summary>
         </member>
-        <member name="M:PPE3_NotaGame.FormCRUDUser.#ctor">
+        <member name="M:PPE3_NotaGame.FormCRUDUser.#ctor(System.Char,System.Int32)">
             <summary>
             constructeur FormCRUDUser 
             </summary>
@@ -277,9 +327,9 @@
             accesseur pseudo
             </summary>
         </member>
-        <member name="P:PPE3_NotaGame.FormCRUDUser.Tb_Communaute">
+        <member name="P:PPE3_NotaGame.FormCRUDUser.Cb_Communaute">
             <summary>
-            accessseur communaute
+            Accesseur communaute
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormGestion">
@@ -298,6 +348,11 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormGestion.columnNotStoratble">
+            <summary>
+            Rend les colones non triables
+            </summary>
         </member>
         <member name="M:PPE3_NotaGame.FormGestion.cbTable_SelectedIndexChanged(System.Object,System.EventArgs)">
             <summary>
@@ -390,6 +445,25 @@
             Classe Modele gérant la connexion et gestion avec la BD "bd_ppe3_notagame"
             </summary>
         </member>
+        <member name="F:PPE3_NotaGame.Modele.dA">
+            <summary>
+            les DataAdapter et DataTable seront gérés dans des collection avec pour chaque un indice correspondant :
+            indice 0 : récupération des noms des tables
+            indice 1 : Table Constructeur
+            indice 2 : Table Support avec jointure pour récupérer tous les libellés
+            indice 3 : Table Support
+            indice 4 : Table compatible avec jointure pour récupérer tous les libellés
+            indice 5 : Table compatible
+            indice 6 : Table jeuxvideo
+            indice 7 : Table users avec jointure pour récupérer tous les libellés
+            indice 8 : Table users
+            indice 9 : Table communaute
+            indice 10 : Table genre
+            indice 11 : Table correspondre avec jointure pour récupérer tous les libellés
+            indice 12 : Table correspondre
+            collection de DataAdapter
+            </summary>
+        </member>
         <member name="P:PPE3_NotaGame.Modele.Connopen">
             <summary>
             test si la connexion à la BD est ouverte
@@ -421,10 +495,16 @@
             indice 0 : récupération des noms des tables
             indice 1 : Table Constructeur
             indice 2 : Table Support avec jointure pour récupérer tous les libellés
-            indice 3 : Table Compatible affichage nom
-            indice 4 : Table JeuxVideos
-            indice 5 : Table Suport
-            indece 6 : Table Compatible (données)
+            indice 3 : Table Support
+            indice 4 : Table compatible avec jointure pour récupérer tous les libellés
+            indice 5 : Table compatible
+            indice 6 : Table jeuxvideo
+            indice 7 : Table users avec jointure pour récupérer tous les libellés
+            indice 8 : Table users
+            indice 9 : Table communaute
+            indice 10 : Table genre
+            indice 11 : Table correspondre avec jointure pour récupérer tous les libellés
+            indice 12 : Table correspondre
             </summary>
         </member>
         <member name="M:PPE3_NotaGame.Modele.seconnecter">
