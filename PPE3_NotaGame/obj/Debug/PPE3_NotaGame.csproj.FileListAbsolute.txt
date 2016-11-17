@@ -123,3 +123,30 @@ C:\Users\ValentinJoubert\Desktop\Nouveau dossier\PPE3_NotaGame\obj\Debug\PPE3_No
 C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCommunaute.resources
 C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDGenre.resources
 C:\Users\quent\Desktop\Nouveau dossier (2)\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCorrespondre.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.config
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.XML
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.exe
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.pdb
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.pdb
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.CodeAnalysisLog.xml
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\PPE3_NotaGame.exe.lastcodeanalysissucceeded
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\MySql.Fabric.Plugin.dll
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF5.xml
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCommunaute.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCompatible.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDConstructeur.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDCorrespondre.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDGenre.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDJeuxvideos.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDSupport.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormCRUDUser.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormGestion.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.FormPrincipale.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Properties.Resources.resources
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csproj.GenerateResource.Cache
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.csprojResolveAssemblyReference.cache
+C:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame\obj\Debug\PPE3_NotaGame.Form5Meilleurs.resources
