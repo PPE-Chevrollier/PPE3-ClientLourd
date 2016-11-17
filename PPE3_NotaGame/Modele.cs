@@ -232,8 +232,8 @@ namespace PPE3_NotaGame
         {
             if (where == "listederou")
             {
-                charger("SELECT NOMS FROM support;", DT[15], DA[15]);
-                charger("SELECT LIBELLE FROM genre;", DT[14], DA[14]);
+                charger("SELECT DISTINCT NOMS FROM support s RIGHT JOIN compatible c ON s.IDS = c.IDS;", DT[15], DA[15]);
+                charger("SELECT DISTINCT LIBELLE FROM genre g RIGHT JOIN correspondre c ON g.IDGENRE = c.IDGENRE;", DT[14], DA[14]);
             }
             else
             {

@@ -10,14 +10,14 @@
        <Types>
         <Type Name="Modele" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-11-17 09:16:16Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-11-17 09:25:05Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implémenter IDisposable sur 'Modele' car il crée des membres des types IDisposable suivants : 'MySqlConnection'. Si 'Modele' existait précédemment, le fait d'ajouter de nouveaux membres qui implémentent IDisposable pour ce type est considéré comme une modification avec rupture pour les utilisateurs existants.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#charger(System.String,System.Data.DataTable,MySql.Data.MySqlClient.MySqlDataAdapter)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Vérifier si les requêtes SQL présentent des failles de sécurité" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-17 09:16:16Z" FixCategory="DependsOnFix">
+            <Message TypeName="Vérifier si les requêtes SQL présentent des failles de sécurité" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-17 09:25:05Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Users\T410\Documents\BTS\2e année\PPE3-ClientLourd-C-5meilleursJeux\PPE3_NotaGame" File="Modele.cs" Line="170">La chaîne de requête passée en 'MySqlCommand.MySqlCommand(string, MySqlConnection)' dans 'Modele.charger(string, DataTable, MySqlDataAdapter)' n'a pas pu contenir les variables 'requete' suivantes. Si ces variables proviennent d'entrées d'utilisateur, utilisez une procédure stockée ou une requête SQL paramétrable au lieu de générer la requête à l'aide de concaténations de chaîne.</Issue>
             </Message>
            </Messages>
