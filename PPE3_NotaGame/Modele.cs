@@ -112,7 +112,7 @@ namespace PPE3_NotaGame
         /// </summary>
         public Modele() {
 
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 16; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -228,7 +228,22 @@ namespace PPE3_NotaGame
                     break;
             }
         }
-
+        public void charger_donnees_meilleurs(string where)
+        {
+            if (where == "listederou")
+            {
+                charger("SELECT NOMS FROM support;", DT[15], DA[15]);
+                charger("SELECT LIBELLE FROM genre;", DT[14], DA[14]);
+            }
+            else
+            {
+                DT[13].Clear();
+                DA[13].Dispose();
+                chargement = false;
+                if (!connopen) return;		// pour vérifier que la BD est bien ouverte
+                charger("SELECT j.NOMJV AS Jeux, ROUND(AVG( c.NOTE ),1) AS Moyenne, s.NOMS FROM jeuxvideos j INNER JOIN commentaire c ON j.IDJV = c.IDJV INNER JOIN compatible co ON j.IDJV = co.IDJV INNER JOIN correspondre cor ON cor.IDJV= j.IDJV INNER JOIN genre g ON g.IDGENRE = cor.IDGENRE INNER JOIN support s ON s.IDS = co.IDS " + where + " GROUP BY j.IDJV ORDER BY AVG( c.NOTE ) DESC LIMIT 5;", dT[13], dA[13]);
+            }
+        }
         #endregion
     }
 }

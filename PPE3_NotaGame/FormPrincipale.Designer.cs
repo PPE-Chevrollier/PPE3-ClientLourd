@@ -60,6 +60,7 @@
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
             this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Click += new System.EventHandler(this.consultationToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem
             // 

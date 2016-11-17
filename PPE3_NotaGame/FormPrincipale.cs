@@ -80,6 +80,12 @@ namespace PPE3_NotaGame
             FormGestion F = new FormGestion();
            // F.MdiParent = this;
             F.Show();
+        }
+
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5Meilleurs F = new Form5Meilleurs();
+            F.Show();
         }    
     }
 }
